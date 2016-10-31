@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIActionSheet+SBNCBlockConfig.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    SBNCActionSheetItem *confirmItem = [[SBNCActionSheetItem alloc] initWithTitle:@"确定" action:^{
+        NSLog(@"确定");
+    } isConfirmItem:YES];
+    SBNCActionSheetItem *cancelItem = [[SBNCActionSheetItem alloc] initWithTitle:@"取消" action:^{
+        NSLog(@"取消");
+    } isCancelItem:YES];
+    SBNCActionSheetItem *otherItem = [[SBNCActionSheetItem alloc] initWithTitle:@"占位的" action:^{
+        NSLog(@"占位的");
+    } isCancelItem:NO];
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"这是个 action sheet" items:@[confirmItem, otherItem, cancelItem]];
+    [sheet showInView:self.view];
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

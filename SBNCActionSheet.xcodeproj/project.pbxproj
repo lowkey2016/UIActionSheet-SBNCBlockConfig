@@ -13,6 +13,8 @@
 		1836A56C1DC725B9007DADA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1836A56A1DC725B9007DADA4 /* Main.storyboard */; };
 		1836A56E1DC725B9007DADA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1836A56D1DC725B9007DADA4 /* Assets.xcassets */; };
 		1836A5711DC725B9007DADA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1836A56F1DC725B9007DADA4 /* LaunchScreen.storyboard */; };
+		1836A57D1DC725E0007DADA4 /* SBNCActionSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836A57A1DC725E0007DADA4 /* SBNCActionSheetItem.m */; };
+		1836A57E1DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1836A57C1DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		1836A56D1DC725B9007DADA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1836A5701DC725B9007DADA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1836A5721DC725B9007DADA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1836A5791DC725E0007DADA4 /* SBNCActionSheetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNCActionSheetItem.h; sourceTree = "<group>"; };
+		1836A57A1DC725E0007DADA4 /* SBNCActionSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNCActionSheetItem.m; sourceTree = "<group>"; };
+		1836A57B1DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+SBNCBlockConfig.h"; sourceTree = "<group>"; };
+		1836A57C1DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+SBNCBlockConfig.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		1836A5601DC725B9007DADA4 /* SBNCActionSheet */ = {
 			isa = PBXGroup;
 			children = (
+				1836A5781DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig */,
 				1836A5641DC725B9007DADA4 /* AppDelegate.h */,
 				1836A5651DC725B9007DADA4 /* AppDelegate.m */,
 				1836A5671DC725B9007DADA4 /* ViewController.h */,
@@ -77,6 +84,17 @@
 				1836A5621DC725B9007DADA4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1836A5781DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig */ = {
+			isa = PBXGroup;
+			children = (
+				1836A5791DC725E0007DADA4 /* SBNCActionSheetItem.h */,
+				1836A57A1DC725E0007DADA4 /* SBNCActionSheetItem.m */,
+				1836A57B1DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig.h */,
+				1836A57C1DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig.m */,
+			);
+			path = "UIActionSheet+SBNCBlockConfig";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1836A57D1DC725E0007DADA4 /* SBNCActionSheetItem.m in Sources */,
 				1836A5691DC725B9007DADA4 /* ViewController.m in Sources */,
 				1836A5661DC725B9007DADA4 /* AppDelegate.m in Sources */,
 				1836A5631DC725B9007DADA4 /* main.m in Sources */,
+				1836A57E1DC725E0007DADA4 /* UIActionSheet+SBNCBlockConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +293,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JQ7R6TK72B;
 				INFOPLIST_FILE = SBNCActionSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jymnchen.SBNCActionSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +306,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JQ7R6TK72B;
 				INFOPLIST_FILE = SBNCActionSheet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jymnchen.SBNCActionSheet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
